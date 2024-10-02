@@ -1,0 +1,19 @@
+footer {
+    padding: 30px 0px;
+
+    height: 200px;
+    width: 100vw;
+
+    background-color: #353935;
+
+    color: white;
+
+    display: block;
+
+    align-self: flex-end;
+
+    .column {
+        display: flex;
+        justify-content: center;
+    }
+}

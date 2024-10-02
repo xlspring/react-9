@@ -1,0 +1,13 @@
+aside {
+  position: fixed;
+  top: 110px;
+  padding: 10px;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0px 10px 10px 0px;
+}
+
+/*# sourceMappingURL=index.css.map */

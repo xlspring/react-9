@@ -1,0 +1,9 @@
+a {
+  margin: 10px 0px;
+  transition: 0.2s all ease-in-out;
+}
+a:hover {
+  scale: 200%;
+}
+
+/*# sourceMappingURL=index.css.map */
