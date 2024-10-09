@@ -15,8 +15,9 @@ code {
 }
 
 .App {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+
+    grid-auto-columns: 1fr;
 
     min-height: 100vh;
 }

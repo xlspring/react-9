@@ -12,6 +12,7 @@ main {
   background-repeat: repeat;
   padding-top: 110px;
   padding-bottom: 30px;
+  border: 1px red solid;
 }
 
 .content-wrapper {
