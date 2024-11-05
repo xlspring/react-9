@@ -1,4 +1,4 @@
-import "../styles/components/GridView/index.css";
+import "./index.css";
 
 function GridView(props) {
   return (

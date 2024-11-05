@@ -1,4 +1,4 @@
-import "../styles/components/Social/index.css";
+import "./index.css";
 
 function Social(props) {
   return (

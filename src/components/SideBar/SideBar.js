@@ -1,11 +1,11 @@
-  import "../styles/components/SideBar/index.css";
+  import "./index.css";
 
-import Social from "./Social";
-import Menu from "./Menu";
+import Social from "../Social/Social";
+import Menu from "../Menu/Menu";
 
-import Telegram from "../assets/telegram.svg";
-import Twitter from "../assets/twitter.svg";
-import Instagram from "../assets/instagram.svg";
+import Telegram from "../../assets/telegram.svg";
+import Twitter from "../../assets/twitter.svg";
+import Instagram from "../../assets/instagram.svg";
 
 function SideBar(props) {
   return (

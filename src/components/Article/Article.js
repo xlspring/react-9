@@ -1,6 +1,6 @@
 import { useState } from "react";
-import Helpers from "../helpers";
-import "../styles/components/Article/index.css";
+import Helpers from "../../helpers";
+import "./index.css";
 
 function Article(props) {
   const [cache, _setCache] = useState(new Helpers());

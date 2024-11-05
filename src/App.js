@@ -1,8 +1,8 @@
-import Header from "./components/Header";
-import Footer from "./components/Footer";
-import Content from "./components/Content";
-import Article from "./components/Article";
-import SideBar from "./components/SideBar";
+import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
+import Content from "./components/Content/Content";
+import Article from "./components/Article/Article";
+import SideBar from "./components/SideBar/SideBar";
 
 function App() {
   return (

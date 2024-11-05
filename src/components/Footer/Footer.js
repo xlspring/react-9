@@ -1,5 +1,5 @@
-import "../styles/components/Footer/index.css";
-import Menu from "./Menu";
+import "./index.css";
+import Menu from "../Menu/Menu";
 
 function Footer(props) {
   return (

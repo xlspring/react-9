@@ -1,6 +1,6 @@
-import "../styles/components/Menu/index.css";
+import "./index.css";
 
-import MenuItem from "./MenuItem";
+import MenuItem from "../MenuItem";
 
 export default function Menu(props) {
   return (

@@ -1,4 +1,4 @@
-import "../styles/components/Content/index.css";
+import "./index.css";
 
 function Content(props) {
   return (
