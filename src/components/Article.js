@@ -1,8 +1,42 @@
+import { useState } from "react";
+import Helpers from "../helpers";
 import "../styles/components/Article/index.css";
 
 function Article(props) {
+  const [cache, _setCache] = useState(new Helpers());
+  const [id, setId] = useState(undefined);
+  const [response, setResponse] = useState("");
+
+  const fireCache = () => {
+    id === "" ?
+      setResponse(cache.getId(undefined)) :
+    setResponse(cache.getId(id));
+  };
+
   return (
     <article>
+      <h1>кеш</h1>
+      <div>
+        <div>
+          <input
+            type="text"
+            placeholder="param"
+            onChange={(e) => {
+              console.log(e.target.value);
+              setId(e.target.value);
+            }}
+          />
+          <button onClick={() => fireCache()}>Fire</button>
+        </div>
+
+        <textarea
+          name="helperOutput"
+          id="helperOutput"
+          value={response}
+          readOnly
+        ></textarea>
+      </div>
+
       <h2>Налаштування сторінки</h2>
       <p>
         Після виконная команди npx create-react-app my-app, в теці my-app Ви
