@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Helpers from "../../helpers";
 import "./index.css";
+import CatList from "../CatList/CatList";
 
 function Article(props) {
   const [cache, _setCache] = useState(new Helpers());
@@ -15,6 +16,8 @@ function Article(props) {
 
   return (
     <article>
+      <h1>коти</h1>
+      <CatList />
       <h1>кеш</h1>
       <div>
         <div>
