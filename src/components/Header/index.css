@@ -29,5 +29,10 @@ header .logo {
   font-size: 24px;
   font-weight: bold;
 }
+header .container {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
 
 /*# sourceMappingURL=index.css.map */

@@ -1,8 +1,8 @@
-a {
+a.social {
   margin: 10px 0px;
   transition: 0.2s all ease-in-out;
 }
-a:hover {
+a.social:hover {
   scale: 200%;
 }
 

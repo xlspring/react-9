@@ -1,10 +1,15 @@
 import "./index.css";
 import Menu from "../Menu/Menu";
+import Logo from "../Logo/Logo";
+import DateTime from "../DateTime/DateTime";
 
 function Header(props) {
   return (
     <header>
-      <p className="logo">🦝 {props.name}</p>
+      <div className={"container"}>
+        <Logo />
+        <DateTime />
+      </div>
       <Menu
         view={"horizontal"}
         list={[
