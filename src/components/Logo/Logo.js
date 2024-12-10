@@ -1,10 +1,10 @@
-import LogoPic from "../../assets/logo.png";
 import "./index.css";
 
-export default function Logo() {
+export default function Logo(props) {
+
 	return (
 		<a className={"logo-wrapper"} href={"/"}>
-			<img src={LogoPic} alt="Logo"/>
+			<img src={props.image} alt="Logo"/>
 		</a>
 	)
 }

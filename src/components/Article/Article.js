@@ -3,10 +3,22 @@ import Helpers from "../../helpers";
 import "./index.css";
 import CatList from "../CatList/CatList";
 
+import { useSelector, useDispatch } from "react-redux";
+import {setLogo} from "../../redux/slices/logoSlice";
+
 function Article(props) {
+  const dispatch = useDispatch();
+
   const [cache, _setCache] = useState(new Helpers());
   const [id, setId] = useState(undefined);
   const [response, setResponse] = useState("");
+
+  const [logoText, setLogoText] = useState("");
+
+  const changeLogo = () => {
+    console.log("LOGO NEW ", logoText);
+    dispatch(setLogo(logoText))
+  }
 
   const fireCache = () => {
     id === "" ?
@@ -16,6 +28,8 @@ function Article(props) {
 
   return (
     <article>
+      <input type="text" onChange={(text) => setLogoText(text.target.value)}/>
+      <button onClick={() => changeLogo()}>uygtfghjuio</button>
       <h1>коти</h1>
       <CatList />
       <h1>кеш</h1>

@@ -1,13 +1,19 @@
 import {useEffect, useState} from "react";
 import "./index.css";
+import {useDispatch, useSelector} from "react-redux";
+import {setDate} from "../../redux/slices/datetimeSlice";
 
 export default function DateTime() {
-	const [date, setDate] = useState(new Date());
+	const dispatch = useDispatch()
+
+	const date = new Date(useSelector(state => state.datetime.currentDate));
 
 	useEffect(() => {
-		setInterval(() => {
-			setDate(new Date())
+		const interval = setInterval(() => {
+			dispatch(setDate(new Date().toISOString()))
 		}, 1000)
+
+		return () => clearInterval(interval)
 	})
 
 	return (
