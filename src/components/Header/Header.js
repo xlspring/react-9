@@ -1,13 +1,11 @@
-import "./index.css";
-import Menu from "../Menu/Menu";
 import Logo from "../Logo/Logo";
 import DateTime from "../DateTime/DateTime";
-
-import {useSelector, useDispatch} from "react-redux";
+import Menu from "../Menu/Menu";
+import {connect} from "react-redux";
+import "./index.css";
 
 function Header(props) {
-  const logo = useSelector(state => state.logo);
-  const menuItems = useSelector(state => state.menu);
+  const { logo, menuItems } = props;
 
   return (
     <header>
@@ -15,12 +13,14 @@ function Header(props) {
         <Logo image={logo} />
         <DateTime />
       </div>
-      <Menu
-        view={"horizontal"}
-        list={menuItems}
-      />
+      <Menu view={"horizontal"} list={menuItems} />
     </header>
   );
 }
 
-export default Header;
+const mapStateToProps = (state) => ({
+  logo: state.logo,
+  menuItems: state.menu,
+});
+
+export default connect(mapStateToProps)(Header);

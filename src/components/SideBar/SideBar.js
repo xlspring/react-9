@@ -1,5 +1,6 @@
+import React from "react";
+import { connect } from "react-redux";
 import "./index.css";
-
 import Social from "../Social/Social";
 import Menu from "../Menu/Menu";
 
@@ -7,18 +8,13 @@ import Telegram from "../../assets/telegram.svg";
 import Twitter from "../../assets/twitter.svg";
 import Instagram from "../../assets/instagram.svg";
 
-import {useSelector} from "react-redux";
-
 function SideBar(props) {
-  const menuItems = useSelector(state => state.menu);
+  const { menuItems, name } = props;
 
   return (
     <aside>
-      <h3>{props.name}</h3>
-      <Menu
-        view={"vertical"}
-        list={menuItems}
-      />
+      <h3>{name}</h3>
+      <Menu view={"vertical"} list={menuItems} />
       <Social icon={Telegram} link={"https://telegram.org"} />
       <Social icon={Twitter} link={"https://twitter.com"} />
       <Social icon={Instagram} link={"https://instagram.com"} />
@@ -26,4 +22,8 @@ function SideBar(props) {
   );
 }
 
-export default SideBar;
+const mapStateToProps = (state) => ({
+  menuItems: state.menu,
+});
+
+export default connect(mapStateToProps)(SideBar);
